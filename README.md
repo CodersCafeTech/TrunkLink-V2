@@ -1,5 +1,5 @@
-# TrunkLink: Edge AIoT for Peaceful Human-Elephant Coexistence
-## Story
+# **TrunkLink: Edge AIoT for Peaceful Human-Elephant Coexistence**
+# Story
 
 We live in a beautiful state called  [Kerala](https://en.wikipedia.org/wiki/Kerala), rightfully known as  **God's Own Country**, where the Western Ghats capture monsoon clouds, creating extraordinary biodiversity. From mist-shrouded tea gardens to pristine rainforests where lion-tailed macaques swing through ancient canopies, our land overflows with natural abundance. Fragrant spice gardens perfume the air while intricate backwaters create a liquid paradise, and our coastline glows with bioluminescent waves. Blessed with double monsoons and hosting over 500 endemic species found nowhere else on Earth, Kerala stands as nature's masterpiece – a narrow strip between mountains and sea where every sunrise reveals not a distant paradise, but a present reality written in emerald forests, sapphire waters, and golden beaches.
 
@@ -67,14 +67,14 @@ The smart collar continuously tracks elephant behavior and location:
 
 Each perimeter node operates in two modes:
 
-**Idle Mode (Default):**
+**1. Idle Mode (Default):**
 
 -   Listens for LoRa P2P transmissions from smart collars
 -   Receives elephant location and behavior data
 -   Relays collar data to the cloud platform via the LTE module
 -   Low power consumption
 
-**Detection Mode (PIR Triggered):**
+**2. Detection Mode (PIR Triggered):**
 
 -   PIR sensor detects motion in the monitored zone
 -   The camera activates and captures a 96×96 grayscale frame
@@ -151,7 +151,7 @@ The system creates a  **distributed monitoring mesh**:
 
 ## 1. ESP32-C6-DEVKIT
 
-![DSC03192.JPG](https://usercdn.edgeimpulse.com/project840566/1a02b29c798964b3ab3b86e96ec207374402548134492f151f40545d0adc80a2)
+![DSC03192-2.jpg](https://usercdn.edgeimpulse.com/project840566/aab7ff60079e71320da7f45a5e19a4955aa71545f787d316574c388678756af4)
 
 The ESP32-C6-DEVKITC-1-N8 is the primary microcontroller used on the collar, running our Edge Impulse machine learning model directly on-device. It features a  **32-bit single-core RISC-V processor clocked up to 160 MHz**  with  **8 MB of external Flash**, allowing efficient ML inference and reliable data processing in the field. The board supports  **Wi-Fi 6, Bluetooth LE, and IEEE 802.15.4**, though Wi-Fi is intentionally disabled in this project to minimize power consumption. With  **512 KB SRAM**  and advanced low-power modes—including  **deep sleep currents below 20 µA**—the ESP32-C6-DEVKITC-1-N8 is well-suited for solar-powered wildlife monitoring. Its built-in  **secure boot, flash encryption, and trusted execution features**  also ensure robust and tamper-resistant operation in remote environments.
 
@@ -163,7 +163,7 @@ It is the primary motion sensor used on the collar, providing high-precision acc
 
 ## 3. LoRa Module (Grove LoRa-E5)
 
-![DSC02857.JPG](https://usercdn.edgeimpulse.com/project840566/a4cba056d07d8f2efb434e22e0635acdcf7476a7c433b3f570ec1443ec352514)
+![DSC02857-2.jpg](https://usercdn.edgeimpulse.com/project840566/70ae143883c91b6a9dead3cb9c454b5d4d4bc5898148512326c06ea4fc4cd09d)
 
 The Grove LoRa-E5 module is built around the  **STM32WLE5JC**, a combination of an ARM Cortex-M4 MCU and SX126x LoRa transceiver in a single package. It supports  **sub-GHz bands (863–923 MHz)**  with  **LoRa, FSK, and GFSK modulation**, achieving  **link budgets up to 170 dB**—crucial for communication across dense forests. The module operates at  **22 dBm maximum transmit power**  and draws  **as little as 1.4 µA in sleep**, making it ideal for a collar that must conserve energy but still reach perimeter nodes kilometers away.
 
@@ -171,19 +171,19 @@ For testing purposes, we initially used the module’s built-in coil antenna. Ho
 
 ## 4. GPS Module (RYS352A)
 
-![DSC03228.JPG](https://usercdn.edgeimpulse.com/project840566/2977613d6089121d98a301325aa4e5993f5b1dab9bbde47a4aa8527b6fa70265)
+![DSC03228-2.jpg](https://usercdn.edgeimpulse.com/project840566/a2d1885a0c6ed82162be78980e3f3fee608d2ea460173e4d502ec4ece01bdcbf)
 
 The RYS352A is a high-sensitivity GPS module based on a  **GNSS SoC supporting GPS/QZSS**  with built-in low-noise amplifiers for improved signal acquisition. It offers  **-167 dBm tracking sensitivity**  and  **cold-start times under 30 seconds**, enabling fixes even under canopy cover. The module outputs standard  **NMEA sentences over UART**, simplifying integration with the ESP32-C6. Its  **low-power tracking mode (~25–30 mA)**  and configurable update rates allow optimized duty cycling for long-term collar deployments. Combined with Edge Impulse ML inference, GPS data provides movement context and geolocation for elephant safety monitoring.
 
 ## 5. Power management
 
-![DSC03268.JPG](https://usercdn.edgeimpulse.com/project840566/7ca49cba74dbd7bfb3451d7adafacad0be19b5c904b70266e5bd244b8385691c)
+![DSC03268-2.jpg](https://usercdn.edgeimpulse.com/project840566/3429f05cbd63539a0f97e630b75ad9e025b8b93c7d441fb2f011dfd43dea088d)
 
 The collar is powered using a compact solar-charging setup designed for long-term field deployment. We use  **two 6 V, 180 mA solar panels connected in parallel**, providing higher current output while maintaining safe charging voltage for the system. These panels are connected to the  **DFRobot 5V Solar Power Manager**, an MPPT-enabled charge controller that maximizes energy harvesting efficiency under varying lighting conditions—essential in dense forest environments. The controller manages charging for a  **1800 mAh Li-Po battery**, which serves as the primary energy reservoir for nighttime operation and cloudy-day conditions.
 
-![DSC02741.JPG](https://usercdn.edgeimpulse.com/project840566/dba87b06f5b75a58fccabab212854fecf9ea146f2f7229d48530da4591a4c97b)
+![DSC02741-2.jpg](https://usercdn.edgeimpulse.com/project840566/9e5f72dba1d91a964a7360fb4f4ffe622c99c0ed047c583ca6b83e2662abb2c0)
 
-![DSC03292.JPG](https://usercdn.edgeimpulse.com/project840566/a36af2924e3318522ad6bb59ee82ec87dfef1beb340cdda44361f9c710c10029)
+![DSC03292-2.jpg](https://usercdn.edgeimpulse.com/project840566/df4afde24ab9bb033edbca43c5ca08c11258a6904a45fff9ee79d7dcf1e381d1)
 
 The DFRobot solar power manager includes  **over-charge, over-discharge, and short-circuit protection**, ensuring battery safety during long-term deployment on wildlife collars. It provides a stable  **5V regulated output**, which is then stepped into the ESP32C6 dev kit. This solar-battery hybrid system ensures continuous operation of sensing, ML inference, and LoRa communication with minimal maintenance.
 
@@ -198,7 +198,7 @@ The collar enclosure is built with a two-section structure consisting of an uppe
 
 The design features smooth rounded edges to prevent discomfort to the elephant and reduce snagging on vegetation. The lower section contains the electronics module, battery, solar charger, and antenna connections.
 
-![DSC03327.JPG](https://usercdn.edgeimpulse.com/project840566/0cf99566a41037924becd3767e885c4dcdbd3d23ac7ad7924079b81f92671ac3)
+![DSC03327-2.jpg](https://usercdn.edgeimpulse.com/project840566/bf3e41d3d55a4175ccbe9b8cc008238ffe7be7fe482294b2b65cfa59414b989d)
 
 For this build, the enclosure was 3D-printed using white PLA filament and later coated with PU army-green paint . This color choice is intentional , army green helps the collar blend into forest surroundings.
 
@@ -212,6 +212,8 @@ The solar panels were attached to the top portion and connected to the power man
 
 ![DSC03409.JPG](https://usercdn.edgeimpulse.com/project840566/e7c7c69a6a75621d72c6ea1b42f5c661877b9605183b9ffc63164a142568818f)
 
+![DSC03456.jpg](https://usercdn.edgeimpulse.com/project840566/27a03c82f2f5fb908622ec1139b6182ab4671d0b5828e5c5d3ffbfa15de20e91)
+
 ![DSC03417.jpg](https://usercdn.edgeimpulse.com/project840566/a8f2ac8a955bc336a4abe1d2aaeed4aea714a50c4dfb95994139b691ca963a65)
 
 ![DSC03315.jpg](https://usercdn.edgeimpulse.com/project840566/59a1417734c629eae583cbdf746cca038822f1ee07fcab4639fa9d510b6c25cf)
@@ -221,7 +223,7 @@ The solar panels were attached to the top portion and connected to the power man
 
 ## 1. XIAO ESP32-S3 Sense
 
-![DSC03137.JPG](https://usercdn.edgeimpulse.com/project840566/a98395a5dce2643fc62eb4f0ce5e24f148b95f0cf5ac17ee0a16d76d6c6af653)
+![DSC03137-2.jpg](https://usercdn.edgeimpulse.com/project840566/4a6e3675aab4749e46ec321279b588d2bd51697f0dd118d34bf57ae0fca9e273)
 
 The XIAO ESP32-S3 Sense serves as the central controller of each perimeter node and includes its own onboard camera module, enabling the system to capture images whenever motion is detected.
 
@@ -231,7 +233,7 @@ Although the board supports Wi-Fi and Bluetooth, both wireless interfaces remain
 
 ![DSC03399.jpg](https://usercdn.edgeimpulse.com/project840566/7dd177e29c8f6cf5537c4d166e84a414f2575f24bba4b47adeda810c08a1e54f)
 
-The A7670C is an LTE Cat-1 cellular modem used in our perimeter nodes to uplink alerts and telemetry to the cloud. It supports standard IP data services (TCP/UDP), SMS, and socket communication and is controllable via AT commands over UART (and USB for development). The module includes a SIM card interface and an external antenna connector for an SMA 4G antenna; in our deployment, it uses an Airtel 4G SIM.
+The A7670C is an LTE Cat-1 cellular modem used in our perimeter nodes to uplink alerts and telemetry to the cloud. It supports standard IP data services (TCP/UDP), SMS, and socket communication and is controllable via AT commands over UART. The module includes a SIM card interface and an external antenna connector for an SMA 4G antenna; in our deployment, it uses an Airtel 4G SIM.
 
 ## 3. Lora Module
 
@@ -249,7 +251,7 @@ The MH-SR602 is an ultra-compact passive infrared (PIR) motion sensor designed f
 
 Each perimeter node operates fully off-grid using a compact solar-powered energy system designed to remain functional day and night. The power architecture consists of three core stages: the solar charging stage, the energy storage stage, and the voltage regulation stage. Together, these ensure continuous and stable operation even under weak sunlight, dense forest canopy, or extended periods without direct sun exposure.
 
-![DSC03424.jpg](https://usercdn.edgeimpulse.com/project840566/8ab9e6c9407e9f21f7e54aec3401978cf26445cccf549835fd07bfef42ce399c)
+![DSC03424-2.jpg](https://usercdn.edgeimpulse.com/project840566/18576239cce0d5a75b7c41bc6ee20eda318148da818a1f1ba97ce0670b4227f2)
 
 Solar energy is harvested and regulated using a CN3795 solar charge controller, which manages a  **single solar panel**  connected to the enclosure due to size constraints. We specifically chose the CN3795 because the DFRobot solar charge controller could only provide  **1.5 A output current**, which is insufficient for handling the peak current requirements of the LTE modem. The CN3795, on the other hand, provides more suitable charging behavior and MPPT-like performance, dynamically adjusting to changes in sunlight. Energy is stored in a  **4000 mAh lithium-ion battery**, selected for its high capacity, long cycle life, and ability to supply the high burst currents needed during LTE transmission while still maintaining enough reserve for night operation.
 
@@ -260,7 +262,7 @@ Solar energy is harvested and regulated using a CN3795 solar charge controller, 
 
 Since the battery voltage fluctuates between 3.0 V and 4.2 V, a TPS61023 boost converter is used to generate a stable 5 V rail. This converter ensures clean and consistent power delivery to the XIAO ESP32-S3 Sense and the A7670C LTE modem. Its ability to support high transient current demands keeps the node functional even during power-intensive cellular communication.
 
-## Perimeter Node Design
+## Perimeter Node Design and Assembly
 
 ![Solar Panel with Camera Enclosure_Front_Rev1 (v2~recovered).png](https://usercdn.edgeimpulse.com/project840566/eb3bbdf271854d296dc5e15ce24ed731f5981d37ca70aa55aacb0cb005767c2e)
 
@@ -279,7 +281,9 @@ A dedicated battery holder was mounted inside the enclosure to keep the lithium 
 
 ![DSC03439.JPG](https://usercdn.edgeimpulse.com/project840566/44b05b988d3ea45ecd5601462646390ddd219e2195a71960aae89f04b30ab6a5)
 
-![DSC03451.jpg](https://usercdn.edgeimpulse.com/project840566/9a09889c33a51db75ba414825a7c26aec4d212c75ca5515ebe8793fc60ee10fa)
+![DSC03459.jpg](https://usercdn.edgeimpulse.com/project840566/8aebe6d0a0d027df2f6409548016a10abadf98cb56df5ff1a149dfd9c8e3cded)
+
+![DSC03461.jpg](https://usercdn.edgeimpulse.com/project840566/23f747ae749e4c60a23a8006477dd75ffc9441138a1390d53c8df565a64cd47f)
 
 ![DSC03445.jpg](https://usercdn.edgeimpulse.com/project840566/85ed1dd81197572d027fda4551107c0e14a3837cb673928eb54af6b186376662)
 
@@ -289,7 +293,7 @@ We also placed a large electrolytic capacitor near the LTE modem to handle the h
 
 ![DSC03336.jpg](https://usercdn.edgeimpulse.com/project840566/0e7c9e03637ff88830270b56232c9f1a34013f261eace0113aee6a95076def4d)
 
-![DSC03338.jpg](https://usercdn.edgeimpulse.com/project840566/7183a02ad72452c9f05ffd3c4eabc90a2bebb34b2d5322574c6d364506049fef)
+![DSC03338-2.jpg](https://usercdn.edgeimpulse.com/project840566/826ae4272dffa82eb0b256de4a08257223d1c8b8a278e4dc32ab408ae5c1233a)
 
 
 # Edge AI For Elephant Behavioral Classification
@@ -1237,7 +1241,7 @@ We successfully deployed TrunkLink on an elephant and verified its functionality
 
 Watch the project video demo  [here](https://youtu.be/ZQbgeWhlHEE).
 
-# **Future Enhancements**
+# Future Enhancements
 
 The TrunkLink system represents a foundational step toward comprehensive wildlife protection, with several planned enhancements that will expand its capabilities and impact across conservation landscapes.
 
