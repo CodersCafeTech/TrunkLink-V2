@@ -1233,7 +1233,9 @@ The ranger dashboard offers comprehensive wildlife monitoring capabilities, incl
 
 We successfully deployed TrunkLink on an elephant and verified its functionality through our web dashboard. Alongside the collar, we also tested the perimeter node system, confirming reliable LoRa communication, motion detection, and cloud reporting. Moving forward, we aim to collaborate with the Wayanad Wildlife Sanctuary to deploy both the smart tracking collars and perimeter nodes in real forest environments, strengthening wildlife monitoring and conservation efforts.  
 
-Watch the project video demo  [here](https://github.com/CodersCafeTech/TrunkLink-V2/tree/main/Video).
+# Demo Video
+
+Watch the project video demo  [here](https://youtu.be/ZQbgeWhlHEE).
 
 # **Future Enhancements**
 
