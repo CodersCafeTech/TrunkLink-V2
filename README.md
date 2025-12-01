@@ -1,5 +1,7 @@
-# TrunkLink V2
-We live in a beautiful state called  [**Kerala**](https://en.wikipedia.org/wiki/Kerala), rightfully known as  **God's Own Country**, where the Western Ghats capture monsoon clouds, creating extraordinary biodiversity. From mist-shrouded tea gardens to pristine rainforests where lion-tailed macaques swing through ancient canopies, our land overflows with natural abundance. Fragrant spice gardens perfume the air while intricate backwaters create a liquid paradise, and our coastline glows with bioluminescent waves. Blessed with double monsoons and hosting over 500 endemic species found nowhere else on Earth, Kerala stands as nature's masterpiece – a narrow strip between mountains and sea where every sunrise reveals not a distant paradise, but a present reality written in emerald forests, sapphire waters, and golden beaches.
+# TrunkLink: Edge AIoT for Peaceful Human-Elephant Coexistence
+## Story
+
+We live in a beautiful state called  [Kerala](https://en.wikipedia.org/wiki/Kerala), rightfully known as  **God's Own Country**, where the Western Ghats capture monsoon clouds, creating extraordinary biodiversity. From mist-shrouded tea gardens to pristine rainforests where lion-tailed macaques swing through ancient canopies, our land overflows with natural abundance. Fragrant spice gardens perfume the air while intricate backwaters create a liquid paradise, and our coastline glows with bioluminescent waves. Blessed with double monsoons and hosting over 500 endemic species found nowhere else on Earth, Kerala stands as nature's masterpiece – a narrow strip between mountains and sea where every sunrise reveals not a distant paradise, but a present reality written in emerald forests, sapphire waters, and golden beaches.
 
 Yet this paradise faces a growing shadow: frequent animal-human conflicts that claim lives on both sides, as expanding settlements and fragmented forests force these animals to venture into villages searching for food and water, their ancient migration routes now blocked by homes and farms, reminding us that even in God's Own Country, the balance between human progress and nature's needs remains delicately poised.
 
@@ -16,17 +18,17 @@ Traditional mitigation methods—from electric fences to community watch program
 
 TrunkLink emerges from this critical need: a robust, field-tested elephant monitoring system that combines Edge AI technology with LoRa communication, intelligent geofencing, and solar sustainability to create an early warning system that protects both elephants and human communities.
 
-# **The TrunkLink Ecosystem**
-
+# The TrunkLink Ecosystem
+![Elephant in Tech-Connected Forest.png](https://usercdn.edgeimpulse.com/project840566/b9768719068b6d1dc8c55aaeca759dbacce54aefd8db8b3c9d2aa938263c4ad8)
 ![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/Elephant%20in%20Tech-Connected%20Forest.png)
 
 The TrunkLink system creates an intelligent wildlife monitoring network that combines  **passive elephant tracking**  with  **active threat detection**  to prevent both human-elephant conflicts and poaching activities in protected forest areas.
 
-**System Components**
+## System Components
 
-**1. Smart Collar (On Elephants)**
+### 1. Smart Collar (On Elephants)
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/_91A9622.JPG)
+![_91A9621 (1).jpg](https://usercdn.edgeimpulse.com/project840566/f331e4820b343c19a591be831526c794d00ef7007f708e0ceaf1cd742d64f9e1)
 
 The smart collar, deployed on elephants contains:
 
@@ -37,9 +39,9 @@ The smart collar, deployed on elephants contains:
 -   **LoRa-E5 module**  - Long-range P2P communication with perimeter nodes
 -   **Solar power system**  - Solar panels for autonomous operation
 
-**2. Perimeter Nodes**  **(Around The Sanctuary)**
+### 2. Perimeter Nodes (Around The Sanctuary)
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03350.JPG)
+![DSC03354.jpg](https://usercdn.edgeimpulse.com/project840566/d362483bd307d5d69ceacb9af3058371c38f5e01c7c6559d0c67b8ee06326d71)
 
 Intelligent perimeter nodes positioned around sanctuary boundaries replace traditional passive gateways. Each node contains:
 
@@ -50,11 +52,9 @@ Intelligent perimeter nodes positioned around sanctuary boundaries replace tradi
 -   **LTE module**  - Cellular connectivity for cloud communication
 -   **Solar power**  - Autonomous operation in remote locations
 
-# [**MyLists | DigiKey - TrunkLink**](https://www.digikey.in/en/mylists/list/S4U9X05NWM)
+## How TrunkLink Works
 
-# **How TrunkLink Works**
-
-**Smart Collar Operations**
+### Smart Collar Operations
 
 The smart collar continuously tracks elephant behavior and location:
 
@@ -64,7 +64,7 @@ The smart collar continuously tracks elephant behavior and location:
 -   GNSS records precise GPS coordinates
 -   Transmits data packets via  **LoRa P2P**  to nearby perimeter nodes every few minutes
 
-**Perimeter Node Operations**
+### Perimeter Node Operations
 
 Each perimeter node operates in two modes:
 
@@ -86,7 +86,7 @@ Each perimeter node operates in two modes:
 -   Sends an immediate alert via LTE to the cloud platform
 -   The LED indicator provides local feedback
 
-**Intelligent Threat Correlation**
+### Intelligent Threat Correlation
 
 The system's key innovation is  **contextual awareness**  - each perimeter node knows:
 
@@ -96,7 +96,7 @@ The system's key innovation is  **contextual awareness**  - each perimeter node 
 
 When a threat is detected, the node correlates this information:  **Elephant herd 500m north (from collar data) + Poacher detected at my location = High-priority alert.**
 
-**Data Flow Architecture**
+### Data Flow Architecture
 
 ```plain
 Smart Collar (Elephant)
@@ -120,7 +120,7 @@ Web Dashboard (Dual Interface)
 └─ Ranger Dashboard → Real-time tracking, geofencing, alerts
 ```
 
-**Vision-Based Threat Detection**
+### Vision-Based Threat Detection
 
 The perimeter nodes operate with  **vision-based threat detection**. The vision pipeline provides:
 
@@ -138,7 +138,7 @@ The perimeter nodes operate with  **vision-based threat detection**. The vision 
 -   Solar charging maintains continuous operation
 -   5-second minimum interval between inferences
 
-**Network Topology**
+### Network Topology
 
 The system creates a  **distributed monitoring mesh**:
 
@@ -148,147 +148,154 @@ The system creates a  **distributed monitoring mesh**:
 -   Nodes transmit to the cloud via LTE (reliable cellular connectivity)
 -   No single point of failure - distributed intelligence architecture
 
-**Collar Hardware**
+# Collar Hardware
 
-**1. ESP32-C6-DEVKIT**
+## 1. ESP32-C6-DEVKIT
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03192.JPG)
+![DSC03192.JPG](https://usercdn.edgeimpulse.com/project840566/1a02b29c798964b3ab3b86e96ec207374402548134492f151f40545d0adc80a2)
 
 The ESP32-C6-DEVKITC-1-N8 is the primary microcontroller used on the collar, running our Edge Impulse machine learning model directly on-device. It features a  **32-bit single-core RISC-V processor clocked up to 160 MHz**  with  **8 MB of external Flash**, allowing efficient ML inference and reliable data processing in the field. The board supports  **Wi-Fi 6, Bluetooth LE, and IEEE 802.15.4**, though Wi-Fi is intentionally disabled in this project to minimize power consumption. With  **512 KB SRAM**  and advanced low-power modes—including  **deep sleep currents below 20 µA**—the ESP32-C6-DEVKITC-1-N8 is well-suited for solar-powered wildlife monitoring. Its built-in  **secure boot, flash encryption, and trusted execution features**  also ensure robust and tamper-resistant operation in remote environments.
 
-**2. ADXL362 three-axis accelerometer module**
+## 2. ADXL362 three-axis accelerometer module
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03211.JPG)
+![DSC03211.jpg](https://usercdn.edgeimpulse.com/project840566/d9eaf150e02a3789764d1dccffb5a78a5c386cb3d294159104fbc47f757c4730)
 
 It is the primary motion sensor used on the collar, providing high-precision acceleration measurements across X, Y, and Z axes. It features an ultra-low-power MEMS design, allowing continuous monitoring while consuming less than 2 µA in standby and under 4 µA in measurement mode, making it ideal for solar-powered wildlife applications. The module communicates via a high-speed SPI interface, ensuring reliable data transfer to the ESP32-C6 microcontroller for on-device processing. With selectable measurement ranges of ±2g, ±4g, and ±8g, and integrated FIFO and activity/inactivity detection, the ADXL362 supports advanced motion detection and energy-efficient operation
 
-**3. LoRa Module (Grove LoRa-E5)**
+## 3. LoRa Module (Grove LoRa-E5)
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC02857.JPG)
+![DSC02857.JPG](https://usercdn.edgeimpulse.com/project840566/a4cba056d07d8f2efb434e22e0635acdcf7476a7c433b3f570ec1443ec352514)
 
 The Grove LoRa-E5 module is built around the  **STM32WLE5JC**, a combination of an ARM Cortex-M4 MCU and SX126x LoRa transceiver in a single package. It supports  **sub-GHz bands (863–923 MHz)**  with  **LoRa, FSK, and GFSK modulation**, achieving  **link budgets up to 170 dB**—crucial for communication across dense forests. The module operates at  **22 dBm maximum transmit power**  and draws  **as little as 1.4 µA in sleep**, making it ideal for a collar that must conserve energy but still reach perimeter nodes kilometers away.
 
 For testing purposes, we initially used the module’s built-in coil antenna. However, for the final implementation, we will upgrade to the  **Molex 211140-0100 flexible antenna**, a high-performance  **868/915 MHz**  PCB antenna with a  **100 mm U.FL cable**. This antenna provides improved radiation efficiency, stable performance, and better penetration through forest environments compared to the onboard coil antenna. To enable external antenna connectivity on the Grove LoRa-E5 board, we must remove the onboard zero-ohm resistor that links the internal coil antenna path. Once this jumper is removed, the external  **Molex U.FL antenna**  connects directly to the module’s  **U.FL antenna port**, ensuring clean RF routing. This setup significantly improves signal quality and communication reliability during long-range collar-to-node LoRa transmissions in dense forest deployments.
 
-**4. GPS Module (RYS352A)**
+## 4. GPS Module (RYS352A)
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03228.JPG)
+![DSC03228.JPG](https://usercdn.edgeimpulse.com/project840566/2977613d6089121d98a301325aa4e5993f5b1dab9bbde47a4aa8527b6fa70265)
 
 The RYS352A is a high-sensitivity GPS module based on a  **GNSS SoC supporting GPS/QZSS**  with built-in low-noise amplifiers for improved signal acquisition. It offers  **-167 dBm tracking sensitivity**  and  **cold-start times under 30 seconds**, enabling fixes even under canopy cover. The module outputs standard  **NMEA sentences over UART**, simplifying integration with the ESP32-C6. Its  **low-power tracking mode (~25–30 mA)**  and configurable update rates allow optimized duty cycling for long-term collar deployments. Combined with Edge Impulse ML inference, GPS data provides movement context and geolocation for elephant safety monitoring.
 
-**5. Power management**
+## 5. Power management
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03268.JPG)
+![DSC03268.JPG](https://usercdn.edgeimpulse.com/project840566/7ca49cba74dbd7bfb3451d7adafacad0be19b5c904b70266e5bd244b8385691c)
 
 The collar is powered using a compact solar-charging setup designed for long-term field deployment. We use  **two 6 V, 180 mA solar panels connected in parallel**, providing higher current output while maintaining safe charging voltage for the system. These panels are connected to the  **DFRobot 5V Solar Power Manager**, an MPPT-enabled charge controller that maximizes energy harvesting efficiency under varying lighting conditions—essential in dense forest environments. The controller manages charging for a  **1800 mAh Li-Po battery**, which serves as the primary energy reservoir for nighttime operation and cloudy-day conditions.
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC02741.JPG)
+![DSC02741.JPG](https://usercdn.edgeimpulse.com/project840566/dba87b06f5b75a58fccabab212854fecf9ea146f2f7229d48530da4591a4c97b)
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03292.JPG)
+![DSC03292.JPG](https://usercdn.edgeimpulse.com/project840566/a36af2924e3318522ad6bb59ee82ec87dfef1beb340cdda44361f9c710c10029)
 
 The DFRobot solar power manager includes  **over-charge, over-discharge, and short-circuit protection**, ensuring battery safety during long-term deployment on wildlife collars. It provides a stable  **5V regulated output**, which is then stepped into the ESP32C6 dev kit. This solar-battery hybrid system ensures continuous operation of sensing, ML inference, and LoRa communication with minimal maintenance.
 
-**Collar Design and Assembly**
+## Collar Design and Assembly
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/Trunk-link%20V2%20render.png)
+![Trunk-link V2 render.png](https://usercdn.edgeimpulse.com/project840566/bd1785c27322447c995f1613806cc3126f4e608b041e3874c6335afe0f97c63f)
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/Trunk-link%20V2%20render(0).png)
+![Trunk-link V2 2222.png](https://usercdn.edgeimpulse.com/project840566/dbf2df63d4a87a730fdca999d7490c34a24c28f2e9fdf67bef3a3f201b41fe03)
+
 
 The collar enclosure is built with a two-section structure consisting of an upper housing and a lower base, secured together using  **M3 stainless-steel screws**  The  **upper section integrates the**  **solar panels**, mounted flush on the top surface to maximize sunlight exposure while maintaining a compact form factor suitable for wildlife movement . Additionally, side extensions were created in the design to securely attach the collar belt to the device.
 
 The design features smooth rounded edges to prevent discomfort to the elephant and reduce snagging on vegetation. The lower section contains the electronics module, battery, solar charger, and antenna connections.
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03327.JPG)
+![DSC03327.JPG](https://usercdn.edgeimpulse.com/project840566/0cf99566a41037924becd3767e885c4dcdbd3d23ac7ad7924079b81f92671ac3)
 
-For the prototype build, the enclosure was 3D-printed using white PLA filament and later coated with PU army-green paint . This color choice is intentional , army green helps the collar blend into forest surroundings.
+For this build, the enclosure was 3D-printed using white PLA filament and later coated with PU army-green paint . This color choice is intentional , army green helps the collar blend into forest surroundings.
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03358.JPG)
+![DSC03358.jpg](https://usercdn.edgeimpulse.com/project840566/4bb00269b049c7a210c65ad8fd2806f583d7abbd38d07916d7c4ab6ccc7972d4)
 
 For internal assembly, we used a large custom green PCB as the primary platform to mount all hardware components neatly and securely. Some modules were attached using female header connectors, making them easily replaceable and upgrade-friendly during field testing. Other components, were fixed using 3M industrial double-sided tape to maintain a compact, vibration-resistant layout. After populating the board, the entire PCB assembly was mounted to the lower enclosure using M2.5 screws, ensuring a stable and rigid structure capable of withstanding movement, impact, and outdoor environmental stresses.
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03413.JPG)
+![DSC03413.jpg](https://usercdn.edgeimpulse.com/project840566/89e21f0728928eff1ab75a530a7a3bb1aa3fbe0d72a472806157d32fbc37d67f)
 
 The solar panels were attached to the top portion and connected to the power management board, after which the enclosure’s top and bottom sections were secured together using M3 self-tapping screws to complete the assembly. Finally, a strong belt was fitted to the collar to ensure stable and secure mounting during field use.
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03409.JPG)
+![DSC03409.JPG](https://usercdn.edgeimpulse.com/project840566/e7c7c69a6a75621d72c6ea1b42f5c661877b9605183b9ffc63164a142568818f)
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03417.JPG)
+![DSC03417.jpg](https://usercdn.edgeimpulse.com/project840566/a8f2ac8a955bc336a4abe1d2aaeed4aea714a50c4dfb95994139b691ca963a65)
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03315.jpg)
+![DSC03315.jpg](https://usercdn.edgeimpulse.com/project840566/59a1417734c629eae583cbdf746cca038822f1ee07fcab4639fa9d510b6c25cf)
 
-**Perimeter Node Hardware**
 
-**1. XIAO ESP32-S3 Sense**
+# Perimeter Node Hardware
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03137(0).JPG)
+## 1. XIAO ESP32-S3 Sense
+
+![DSC03137.JPG](https://usercdn.edgeimpulse.com/project840566/a98395a5dce2643fc62eb4f0ce5e24f148b95f0cf5ac17ee0a16d76d6c6af653)
 
 The XIAO ESP32-S3 Sense serves as the central controller of each perimeter node and includes its own onboard camera module, enabling the system to capture images whenever motion is detected.
 
 Although the board supports Wi-Fi and Bluetooth, both wireless interfaces remain disabled to minimize power consumption during long-term solar-powered deployment. The module is powered through its USB input from a 5V boost converter, and its onboard 3.3V regulator supplies stable power to peripherals such as the LoRa-E5 module. The ESP32-S3 architecture features a dual-core processor with vector instructions optimized for AI workloads, generous SRAM for running ML models, native USB support for programming, and deep sleep modes for efficient low-power operation.
 
-**2. LTE Modem (A7670C)**
+## 2. LTE Modem (A7670C)
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03399(0).JPG)
+![DSC03399.jpg](https://usercdn.edgeimpulse.com/project840566/7dd177e29c8f6cf5537c4d166e84a414f2575f24bba4b47adeda810c08a1e54f)
 
 The A7670C is an LTE Cat-1 cellular modem used in our perimeter nodes to uplink alerts and telemetry to the cloud. It supports standard IP data services (TCP/UDP), SMS, and socket communication and is controllable via AT commands over UART (and USB for development). The module includes a SIM card interface and an external antenna connector for an SMA 4G antenna; in our deployment, it uses an Airtel 4G SIM.
 
-**3. Lora Module**
+## 3. Lora Module
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03245.JPG)
+![DSC03245.jpg](https://usercdn.edgeimpulse.com/project840566/dfb97b31f5fe4e88665bb1a071e73e898914750c5bf3c6f2de95ff4c08e3a7a9)
 
 The perimeter nodes use the same Grove LoRa-E5 module as the collar, ensuring a unified and highly reliable communication link between both systems. In this setup, the module is dedicated to receiving LoRa packets transmitted from the collar.
 
-**4. PIR motion sensor**
+## 4. PIR motion sensor
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03428.JPG)
+![DSC03428.jpg](https://usercdn.edgeimpulse.com/project840566/da84dbe4c49da175371131b7db9d92d2df747b82a6a609ab43f70aa4fd67286e)
 
 The MH-SR602 is an ultra-compact passive infrared (PIR) motion sensor designed for low-power human and animal detection. It operates on  **3.3V–5V**  input, making it fully compatible with the XIAO ESP32-S3 Sense without additional regulation. The sensor typically draws  **<15 µA**  in standby, which is ideal for solar-powered systems where energy efficiency is critical. It provides a  **digital output**  signal with a detection range of approximately  **3–5 meters**  and a  **detection angle of about 100°**, ensuring wide-area coverage in outdoor environments. With built-in signal processing and noise filtering, the MH-SR602 reliably detects motion even with ambient temperature variations or outdoor disturbances.
 
-**4. Power Management**
+## 4. Power Management
 
 Each perimeter node operates fully off-grid using a compact solar-powered energy system designed to remain functional day and night. The power architecture consists of three core stages: the solar charging stage, the energy storage stage, and the voltage regulation stage. Together, these ensure continuous and stable operation even under weak sunlight, dense forest canopy, or extended periods without direct sun exposure.
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03424.JPG)
+![DSC03424.jpg](https://usercdn.edgeimpulse.com/project840566/8ab9e6c9407e9f21f7e54aec3401978cf26445cccf549835fd07bfef42ce399c)
 
 Solar energy is harvested and regulated using a CN3795 solar charge controller, which manages a  **single solar panel**  connected to the enclosure due to size constraints. We specifically chose the CN3795 because the DFRobot solar charge controller could only provide  **1.5 A output current**, which is insufficient for handling the peak current requirements of the LTE modem. The CN3795, on the other hand, provides more suitable charging behavior and MPPT-like performance, dynamically adjusting to changes in sunlight. Energy is stored in a  **4000 mAh lithium-ion battery**, selected for its high capacity, long cycle life, and ability to supply the high burst currents needed during LTE transmission while still maintaining enough reserve for night operation.
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03432.JPG)
+![DSC03432.jpg](https://usercdn.edgeimpulse.com/project840566/6234819e9d7d9a8c89c964790daa55fa2be9cba1bf777df14eebe89cd838d1f0)
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03436.JPG)
+![DSC03436.jpg](https://usercdn.edgeimpulse.com/project840566/e6c5a3ea32648afe28bb4fadc8f41e43ec6197680cc42d19026ea8b3af5a8f57)
+
 
 Since the battery voltage fluctuates between 3.0 V and 4.2 V, a TPS61023 boost converter is used to generate a stable 5 V rail. This converter ensures clean and consistent power delivery to the XIAO ESP32-S3 Sense and the A7670C LTE modem. Its ability to support high transient current demands keeps the node functional even during power-intensive cellular communication.
 
-**Perimeter Node Design**
+## Perimeter Node Design
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/Solar%20Panel%20with%20Camera%20Enclosure_Front_Rev1%20(v2~recovered).png)
+![Solar Panel with Camera Enclosure_Front_Rev1 (v2~recovered).png](https://usercdn.edgeimpulse.com/project840566/eb3bbdf271854d296dc5e15ce24ed731f5981d37ca70aa55aacb0cb005767c2e)
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/back%20%20node.png)
+![back  node.png](https://usercdn.edgeimpulse.com/project840566/08106bbc9ff25d582f065915910414054eccdbd314e297b8ea132a16bf2915fc)
 
 The enclosure is built in two interlocking sections—an upper lid and a lower base secured together using M3 screws placed around the perimeter. This provides a tight mechanical seal while still allowing quick access for maintenance or upgrades. The front face includes a dedicated opening for the XIAO ESP32-S3 Sense camera module and the PIR module. The back portion includes an opening for grabbing solar panel wires and the antenna. The enclosure was 3D-printed using white PLA and finished with a grey spray paint coating.
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03420.JPG)
+![DSC03420.jpg](https://usercdn.edgeimpulse.com/project840566/3dd566fda37efa3dbca9dd4a846072fe70bd4bec8758b060236dd5dd087638a7)
 
 We began the assembly by preparing the XIAO ESP32-S3 Sense board and soldering it to female headers so it could be easily removed or replaced during testing.
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03405.JPG)
+![DSC03405.jpg](https://usercdn.edgeimpulse.com/project840566/0e01f8c07237bc86e10654c61ba8aa01d11c95515ff3d3aa98a520eb40457c3e)
 
 After that, each module was placed inside and outside the enclosure one by one, making sure all power and signal connections were routed cleanly and securely.
+A dedicated battery holder was mounted inside the enclosure to keep the lithium battery stable, and a small cutout PCB was added to neatly mount both the LTE modem and the voltage booster. For the LoRa module, we used a  4G antenna for improved reception and mounted it externally for maximum signal performance.
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03439.JPG)
+![DSC03439.JPG](https://usercdn.edgeimpulse.com/project840566/44b05b988d3ea45ecd5601462646390ddd219e2195a71960aae89f04b30ab6a5)
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03451.JPG)
+![DSC03451.jpg](https://usercdn.edgeimpulse.com/project840566/9a09889c33a51db75ba414825a7c26aec4d212c75ca5515ebe8793fc60ee10fa)
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03445.JPG)
+![DSC03445.jpg](https://usercdn.edgeimpulse.com/project840566/85ed1dd81197572d027fda4551107c0e14a3837cb673928eb54af6b186376662)
 
 Finally, the upper and lower parts of the enclosure were aligned and tightened using M3 Nuts and bolts, completing the assembly of the perimeter node.
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03336.JPG)
+We also placed a large electrolytic capacitor near the LTE modem to handle the high burst-current demands during transmission and to prevent voltage dips that could cause the system to reset.
 
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03338.JPG)
+![DSC03336.jpg](https://usercdn.edgeimpulse.com/project840566/0e7c9e03637ff88830270b56232c9f1a34013f261eace0113aee6a95076def4d)
 
-# **Edge AI For Elephant Behavioral Classification**
+![DSC03338.jpg](https://usercdn.edgeimpulse.com/project840566/7183a02ad72452c9f05ffd3c4eabc90a2bebb34b2d5322574c6d364506049fef)
 
-**Dataset**
+
+# Edge AI For Elephant Behavioral Classification
+
+## Dataset
 
 A high-quality dataset is essential for building an accurate elephant behavioral classification system, particularly for wearable devices designed for monitoring wild elephants. Elephant behavior classification systems require data that includes a variety of real-world scenarios, such as different behavioral states and movement patterns, to ensure that the model can reliably distinguish between distinct behaviors critical for conservation efforts. Gathering such a dataset for elephants is highly challenging, as it requires careful adaptation of existing animal behavior research data to elephant-specific movement patterns and conservation needs.
 
@@ -309,11 +316,11 @@ The TrunkLink dataset leverages the comprehensive animal behavior research from 
 -   **Episode Duration**: 2 seconds (200 samples per episode) - sufficient for elephant behavioral pattern recognition
 -   **Sensor Configuration**: Tri-axial accelerometer (X, Y, Z axes) suitable for smart collar deployment
 
-**Preparing The Dataset**
+## Preparing The Dataset
 
 The original research dataset is stored in MATLAB's proprietary .mat format, requiring specialized extraction techniques adapted for elephant behavioral analysis. To convert it into Edge Impulse-compatible JSON format, we used the following script
 
-```plain
+```python
 import argparse
 import csv
 import gzip
@@ -822,7 +829,7 @@ if __name__ == "__main__":
 
 The above script converts each elephant behavioral episode is converted to Edge Impulse's standardized JSON format:
 
-```plain
+```json
 {
   "protected": {
     "ver": "v1",
@@ -851,37 +858,33 @@ The above script converts each elephant behavioral episode is converted to Edge 
 
 Execute this command to convert raw data into JSON format
 
-```plain
+```bash
 python preprocess.py input.mat --mode timeseries -o ./timeseries_data/ --hmac-key <hmac-key> --scale-factor 9.80665
 ```
 
 Once the command completes, you'll find a new  **timeseries_data**  folder containing all the processed data files. To import this dataset into Edge Impulse, navigate to the  **Data Acquisition**  tab and upload the files from this folder.
 
-![](https://hackster.imgix.net/uploads/attachments/1891228/data_acquisition_6g4O20KuVe.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+![Data Acquisition.png](https://usercdn.edgeimpulse.com/project840566/46a4124d0110e52bf4fc15f499741ec21f45c8a1d88adac217d536e26e906cd2)
 
 After uploading the elephant behavioral dataset, perform a  **Train/Test split**, which divides the dataset into training and testing sets in an 80/20 ratio, ensuring balanced representation across all behavioral classes and recording sessions.
 
-**Create Impulse**
+## Create Impulse
 
 To build an ML model in Edge Impulse for elephant behavioral classification, start by  **Creating An Impulse**. This defines the entire pipeline for processing and analyzing elephant accelerometer data from smart collars.
 
 -   To create an impulse, navigate to the  **Impulse Design**  section in your Edge Impulse project and click  **Create Impulse**  to begin setting up the TrunkLink elephant behavioral classification pipeline.
 
-![](https://hackster.imgix.net/uploads/attachments/1891229/input_lF5dgDvETW.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+- Click **Add a processing block** and select **Spectral Features** from the available processing blocks. The Spectral Features block extracts frequency-domain characteristics from the accelerometer sensor data, transforming the raw signals into spectral representations that highlight dominant frequency components and patterns in elephant movement behavior.
 
--   Click  **Add a processing block**  and select  **Raw Data**  from the available processing blocks. The Raw Data block processes the raw accelerometer sensor data without pre-processing, allowing the deep learning model to learn features directly from elephant movement patterns.
+-   Click  **Add a Learning Block**  and choose  **Classification**  as the learning block. The Classification block learns from the spectral features and applies this knowledge to classify new elephant behavioral data into one of four classes
 
-![](https://hackster.imgix.net/uploads/attachments/1891230/raw_data_GPFtknCgyI.png?auto=compress%2Cformat&w=740&h=555&fit=max)
-
--   Click  **Add a Learning Block**  and choose  **Classification**  as the learning block. The Classification block learns from the raw accelerometer features and applies this knowledge to classify new elephant behavioral data into one of four classes
-
-![](https://hackster.imgix.net/uploads/attachments/1891231/classification_IflIsW25BF.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+![Screenshot 2025-11-30 at 11.51.17 PM.png](https://usercdn.edgeimpulse.com/project840566/092b6c6faa7f469fc5de0e3804b09ffda0a3dca62208913be7ee264dbb648af8)
 
 -   After configuring the processing and learning blocks with elephant-specific parameters, click  **Save Impulse**  to finalize the TrunkLink behavioral classification pipeline.
 
-**Feature Generation**
+## Feature Generation
 
-Proceed to the  **Raw Data**  tab to begin the feature generation process specifically designed for elephant behavioral analysis. The Raw Data tab offers various options for data manipulation, including axis scaling and filtering. For the TrunkLink elephant behavioral classification project, we retain the default settings to allow the deep learning model to learn directly from raw elephant movement patterns.
+Proceed to the  **Spectral Features**  tab to begin the feature generation process specifically designed for elephant behavioral analysis. This tab offers various options for data manipulation, including axis scaling and filtering. For the TrunkLink elephant behavioral classification project, we retain the default settings to allow the deep learning model to learn directly from raw elephant movement patterns.
 
 The feature generation process for elephant behavioral classification utilizes advanced algorithms designed to identify key patterns and characteristics within elephant accelerometer data:
 
@@ -892,34 +895,33 @@ The feature generation process for elephant behavioral classification utilizes a
 
 Generate features by clicking  **Generate features**. This process extracts meaningful patterns from the elephant accelerometer data that will be used by the learning block to accurately classify elephant behaviors for conservation applications.
 
-![](https://hackster.imgix.net/uploads/attachments/1891232/feature_generation_9b2sKf674A.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+![Screenshot 2025-11-30 at 11.51.34 PM.png](https://usercdn.edgeimpulse.com/project840566/ae889e569c0bc37e591c540fdb838fac3d58756dadf4a65fe386d5c7e229ac28)
 
-**Model Training**
+## Model Training
 
 Having extracted and prepared features from the elephant behavioral data, proceed to the  **Classifier**  tab to begin training the model. The Classifier tab offers various options for model configuration. We have trained the model with default settings.
 
-![Screenshot 2025-09-30 at 9.36.59 PM.png](https://hackster.imgix.net/uploads/attachments/1892288/screenshot_2025-09-30_at_9_36_59pm_PWf0ZeZVY8.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+![Screenshot 2025-11-30 at 11.51.45 PM.png](https://usercdn.edgeimpulse.com/project840566/78e8209d02c0358107a311c6ce5bdd42c35ebf6930536d3876361a57a1c446b6)
 
-The trained model achieved an impressive 96% accuracy, demonstrating excellent performance in classifying the four elephant behaviors (vigilance, resting, foraging, and running).
+The trained model achieved an impressive 85% accuracy, demonstrating excellent performance in classifying the four elephant behaviors (vigilance, resting, foraging, and running).
 
-**Model Testing**
+## Model Testing
 
 After training and fine-tuning the model, we evaluated its performance on unseen data using the  **Model Testing**  tab's  **Classify All**  feature. This testing phase validates the model's ability to accurately classify behaviors on new data. The high classification accuracy achieved on the test set demonstrates the model's reliability and readiness for real-world deployment.
 
-![Screenshot 2025-09-30 at 9.36.49 PM.png](https://hackster.imgix.net/uploads/attachments/1892290/screenshot_2025-09-30_at_9_36_49pm_UEyV811t9A.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+![Screenshot 2025-11-30 at 11.51.53 PM.png](https://usercdn.edgeimpulse.com/project840566/59c0042df8fb1ecbe78fbb026370c6773e2ec5f2c10436daed50e53e72e0c7f4)
 
 **Deployment**
 
-On the Deployment page, select the "Create Library" option and choose "C++ Library", which will create a general-purpose C++ library compatible with Nordic Thingy 91x.
+On the Deployment page, select the "Create Library" option and choose "Arduino Library", which will create an Arduino library compatible with ESP32C6 DevKit.
 
-![Screenshot 2025-09-30 at 9.37.56 PM.png](https://hackster.imgix.net/uploads/attachments/1892291/screenshot_2025-09-30_at_9_37_56pm_a1WPfNsuxf.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+![Screenshot 2025-11-30 at 11.52.02 PM.png](https://usercdn.edgeimpulse.com/project840566/5a0181ad6e613a0b30680f8866e77474e3337ce38685f31025eff60bf92d52b3)
 
-#   
-**Poacher Detection With Edge Impulse On Perimeter Nodes**
+# Poacher Detection With Edge Impulse On Perimeter Nodes
 
 Poaching detection systems require data that encompasses diverse real-world scenarios, including various lighting conditions, terrain types, and human activities, to ensure the model can reliably distinguish between legitimate forest activities and potential poaching threats. Gathering such a dataset for wildlife protection is challenging, as it requires careful curation of images that represent both normal forest scenes and suspicious activities while maintaining ethical standards and avoiding real poaching documentation.
 
-**Dataset Source and Structure**
+## Dataset Source and Structure
 
 The TrunkLink Perimeter Vision model utilizes the  **Poacher Detection 3 Classes dataset**  from Kaggle, created by Georgios Giouvanis. This publicly available dataset was specifically designed for training computer vision models to identify poaching activities in wildlife environments. The original dataset comprises  **4,721 images**  organized into three distinct categories:
 
@@ -929,9 +931,9 @@ The TrunkLink Perimeter Vision model utilizes the  **Poacher Detection 3 Classes
 
 The dataset includes augmented variations to improve model robustness, featuring images captured under different lighting conditions, angles, and distances that simulate real-world deployment scenarios in dense forest environments.
 
-**Dataset Preprocessing and Reorganization**
+## Dataset Preprocessing and Reorganization
 
-**Merge Classes for Binary Classification**
+### Merge Classes for Binary Classification
 
 For TrunkLink's use case, you merged the 3 original classes into 2:
 
@@ -944,7 +946,7 @@ Class 0 (No Poachers)          → NPA (No Poaching Activity)
 
 Use this script to reorganise the dataset
 
-```plain
+```python
 import os
 import shutil
 from pathlib import Path
@@ -980,9 +982,9 @@ print(f"PPA images: {len(os.listdir(f'{output_dir}/PPA'))}")
 print(f"NPA images: {len(os.listdir(f'{output_dir}/NPA'))}")
 ```
 
-**Data Upload to Edge Impulse**
+## Data Upload to Edge Impulse
 
-![DatasetUpload.png](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/image.png)
+![DatasetUpload.png](https://usercdn.edgeimpulse.com/project840566/e84616e6a8377afe4ee87914ef2a2744eaf4b8c91342ce6a31eb6d95dfa619a2)
 
 1. Go to the  **Data acquisition**  tab
 
@@ -1002,7 +1004,7 @@ print(f"NPA images: {len(os.listdir(f'{output_dir}/NPA'))}")
 -   Label:  **NPA**
 -   Category:  **Automatically split**  (80/20)
 
-**Create Impulse**
+## Create Impulse
 
 To build an ML model in Edge Impulse for anti-poaching detection, start by  **Creating An Impulse**. An impulse defines the entire pipeline that transforms raw camera images into actionable threat detection—taking pixels, extracting features, and classifying the scene as PPA (Poaching Activity Present) or NPA (No Poaching Activity).
 
@@ -1024,18 +1026,17 @@ Click  **Add a Learning Block**  and choose  **Transfer Learning (Images)**. Tra
 
 Click  **Save Impulse**  to finalize the pipeline.
 
-![Screenshot 2025-11-30 at 8.27.47 PM.png](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/image(1).png)
+![Screenshot 2025-11-30 at 8.27.47 PM.png](https://usercdn.edgeimpulse.com/project840566/d4cb2a91d913166051c278528479d8689ab0f69a67902d01f4244662682c326e)
 
-**Image Processing**
+## Image Processing
 
 Navigate to the  **Image**  tab to configure preprocessing parameters:
 
 -   **Color depth:**  RGB (preserves critical visual information)
--   **Resize mode:**  Fit shortest axis
 
 RGB color depth helps distinguish camouflage patterns, firearm reflections, and human clothing against forest backgrounds—subtle cues lost in grayscale.
 
-![Screenshot 2025-11-30 at 8.28.11 PM.png](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/image(4).png)
+![Screenshot 2025-11-30 at 8.28.11 PM.png](https://usercdn.edgeimpulse.com/project840566/2228d371b011d63d20ede9c4414110c47367ad675f22178b6aada3b0da6ba46b)
 
 Click  **Save parameters**, then click  **Generate features**  to begin feature extraction. This process analyzes all 4,721 training images, typically taking 10-20 minutes on Edge Impulse's cloud infrastructure.
 
@@ -1045,9 +1046,9 @@ The feature generation extracts:
 -   **Texture analysis:**  Manufactured materials vs organic forest textures
 -   **Edge detection:**  Straight lines and geometric shapes indicating human-made objects
 
-**Feature Explorer visualization:**
+## Feature Explorer visualization:
 
-![Screenshot 2025-11-30 at 8.28.29 PM.png](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/image(3).png)
+![Screenshot 2025-11-30 at 8.28.29 PM.png](https://usercdn.edgeimpulse.com/project840566/ac80f7e07a9759a34fa0aeac38e7838cd51aaf00cd9ac2c2af6a58172623b45e)
 
 After generation, review the  **Feature Explorer**—a scatter plot showing your dataset's structure. For a well-prepared dataset, you should observe:
 
@@ -1057,24 +1058,26 @@ After generation, review the  **Feature Explorer**—a scatter plot showing your
 
 Significant cluster overlap suggests ambiguous images that should be reviewed before training.
 
-**Model**  **Training**
+## Model Training
 
-![Screenshot 2025-11-30 at 8.28.20 PM.png](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/image(2).png)
-
-  
+![Screenshot 2025-11-30 at 8.28.20 PM.png](https://usercdn.edgeimpulse.com/project840566/706f49a412136d21ae6d3205be1dce403fa9bc1a8eed51e3bdf043045db37f5c)
 
 -   Training cycles: 30 epochs
 -   Learning rate: 0.0005
 
 Data augmentation artificially expands your training dataset by simulating real-world variations the camera will encounter—different lighting, angles, and distances. Click Start training. The training process typically completes in 15-25 minutes on Edge Impulse's cloud GPUs. The model will iterate through 30 epochs, learning to distinguish between PPA and NPA patterns.
 
-**Model Testing**
+## Model Testing
 
-![Screenshot 2025-11-30 at 9.12.20 PM.png](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/image(5).png)
+![Screenshot 2025-11-30 at 9.12.20 PM.png](https://usercdn.edgeimpulse.com/project840566/1931b4688194c5a0fb7c82dc2e5549e8114dae7f4bdeef4cfc0c42d1bb932c4b)
 
-After training and fine-tuning the model, evaluate its performance on completely unseen data using the  **Model Testing**  tab. Navigate to  **Model testing**  and click  **Classify all**  to run the trained model on your reserved test set of 944 images that were never shown during training. The model achieved test accuracy of 92-94%, demonstrating strong generalization to new data. The confusion matrix shows that 94% of poaching activities (PPA) are correctly detected, with only 6% missed—an acceptable false negative rate for edge deployment that can be improved with additional field data from Wayanad Wildlife Sanctuary.  **Deployment**  On the Deployment page, select  **Arduino library**  as the deployment option. Edge Impulse will build an optimized library package containing your trained model, the inference runtime, and all necessary dependencies for the XIAO ESP32S3 Sense.
+After training and fine-tuning the model, evaluate its performance on completely unseen data using the  **Model Testing**  tab. Navigate to  **Model testing**  and click  **Classify all**  to run the trained model on your reserved test set of 944 images that were never shown during training. The model achieved test accuracy of 92-94%, demonstrating strong generalization to new data. The confusion matrix shows that 94% of poaching activities (PPA) are correctly detected, with only 6% missed—an acceptable false negative rate for edge deployment that can be improved with additional field data from Wayanad Wildlife Sanctuary.  
 
-![Screenshot 2025-11-30 at 9.13.19 PM.png](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/image(0).png)
+## Deployment
+
+On the Deployment page, select  **Arduino library**  as the deployment option. Edge Impulse will build an optimized library package containing your trained model, the inference runtime, and all necessary dependencies for the XIAO ESP32S3 Sense.
+
+![Screenshot 2025-11-30 at 9.13.19 PM.png](https://usercdn.edgeimpulse.com/project840566/018dee7e9f5e489c79a1b586d263b9f617f7bdc90f51ca5011f84c78f9ae558e)
 
 Click Build and download the generated Arduino library ZIP file. The library includes INT8 quantization, which compresses the model while maintaining accuracy—essential for fitting within the ESP32S3's memory constraints.  **Install the library in Arduino IDE:**  Open Arduino IDE and navigate to  **Sketch → Include Library → Add .ZIP Library**, then select the downloaded ZIP file to install. Configure XIAO ESP32S3 Sense board settings: - Board: XIAO_ESP32S3 - PSRAM: OPI PSRAM (Must be enabled) - Partition Scheme: Huge APP (3MB No OTA/1MB SPIFFS) - Upload Speed: 921600
 
@@ -1082,7 +1085,7 @@ The PSRAM setting is critical—it enables the 8MB external memory needed for ca
 
 The deployed model integrates into TrunkLink's perimeter node system, where it runs continuously, powered by solar panels. When the PIR motion sensor detects movement, the camera captures an image, and the Edge Impulse model classifies it within 100-150ms. If poaching activity is detected with confidence above 70%, the node sends an immediate alert via LTE to the cloud platform, including the threat type, location, and timestamp—correlated with nearby elephant positions received from the smart collar via LoRa communication.
 
-# **Firebase Real-Time Database**
+# Firebase Real-Time Database
 
 Firebase Real-Time Database is a NoSQL database where information is stored in JSON object format. It keeps data synchronized instantly among all connected users, making sure everyone views identical information simultaneously. Its main capabilities are:
 
@@ -1090,17 +1093,17 @@ Firebase Real-Time Database is a NoSQL database where information is stored in J
 -   **Offline functionality**: The Firebase SDKs store data locally on devices, enabling applications to work without internet connectivity and synchronize modifications once the connection is restored.
 -   **Scalability**: Firebase RTDB supports high-volume applications serving millions of users effectively.
 
-**Setting Up a Firebase Project**
+## Setting Up a Firebase Project
 
-**1. Create a Firebase Project:**
+### 1. Create a Firebase Project:
 
 -   Go to the [Firebase Console.](https://console.firebase.google.com/)
 
-![](https://hackster.imgix.net/uploads/attachments/1891486/unnamed.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+![Screenshot 2025-01-28 at 9.11.13 PM.png](https://usercdn.edgeimpulse.com/project840566/d4a2c42681fa85aee5a87e50f41875c9b933511b9ef0b5605c704c7bc0d65977)
 
 -   Click  **"Add Project"**.
 
-![](https://hackster.imgix.net/uploads/attachments/1891487/unnamed.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+![Screenshot 2025-01-28 at 9.12.04 PM.png](https://usercdn.edgeimpulse.com/project840566/de9b25f613c2b4670a659689056e33fe1282259aef52004d4ae110a5a26f52ab)
 
 -   Enter a project name and follow the prompts to create the project.
 
@@ -1108,38 +1111,40 @@ Firebase Real-Time Database is a NoSQL database where information is stored in J
 
 -   After creating the project, click on the  **</>**(web) icon to add Firebase to your web app.
 
-![](https://hackster.imgix.net/uploads/attachments/1891488/unnamed.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+![Screenshot 2025-01-28 at 9.12.52 PM.png](https://usercdn.edgeimpulse.com/project840566/e3578e3b15f66fa24808d9c9bf8a56ae84efd1efd6e16329d20faf6efda8ae5b)
 
 -   Register your app by providing a nickname.
 -   Firebase will generate a configuration object containing your API keys and other settings. Keep this handy when initializing Firebase in your app.
 
-![](https://hackster.imgix.net/uploads/attachments/1891489/unnamed.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+![Screenshot 2025-01-28 at 9.13.23 PM.png](https://usercdn.edgeimpulse.com/project840566/fbf1a318a7dfacf1b361572c397bc75283b3342768f3b739da410415db69e21b)
 
-**Enabling Firebase Realtime Database**
+## Enabling Firebase Realtime Database
 
-**1. Navigate to Real-Time Database:**
+### 1. Navigate to Real-Time Database:
 
 -   In the Firebase Console, go to the  **Build**  section in the left sidebar and select  **Realtime Database**
 
-**2. Create a Database:**
+### 2. Create a Database:
 
 -   Click  **"Create Database"**
 -   Choose a location for your database (preferably close to your users for better performance).
 
-![](https://hackster.imgix.net/uploads/attachments/1891490/unnamed.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+![Screenshot 2025-01-28 at 9.14.10 PM.png](https://usercdn.edgeimpulse.com/project840566/1059b609cdfd308fcd4011f0242788995fcba8764eef5be8df77949ae85b2d44)
+
+![Screenshot 2025-01-28 at 9.14.29 PM.png](https://usercdn.edgeimpulse.com/project840566/47f609bb4bc9385b9bb091c367a2e19b3907dec66ec69a2b0d26935392068068)
 
 -   Select  **"Start in test mode"**  to allow read/write access to all users temporarily (You can configure security rules later)
 
-![](https://hackster.imgix.net/uploads/attachments/1891491/unnamed.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+![Screenshot 2025-01-28 at 9.14.37 PM.png](https://usercdn.edgeimpulse.com/project840566/acbfd1843b79e823dd3cb0505e97b5d57fe1f3fb48f6592ffed1464e61256afa)
 
-**3. Database URL**
+### 3. Database URL
 
 -   Once the database is created, Firebase will provide a unique URL for your database in the format:
 -   This URL is used to reference your database in your app.
 
-![](https://hackster.imgix.net/uploads/attachments/1891492/unnamed.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+![Screenshot 2025-01-28 at 9.16.10 PM.png](https://usercdn.edgeimpulse.com/project840566/0e9682af204d4a28e4ea31d613271f867a24d2909a26692dc1ea2eba082f78ad)
 
-**4. Firebase Project ID:**
+### 4. Firebase Project ID:
 
 The  **Firebase Project ID**  is a unique identifier for your Firebase project. It distinguishes your project from others and is required when making API calls or configuring Firebase services.
 
@@ -1151,7 +1156,7 @@ The  **Firebase Project ID**  is a unique identifier for your Firebase project. 
 -   Select  **"Project settings"**.
 -   Under the  **General**  tab, you will find the  **Project ID**  listed.
 
-![](https://hackster.imgix.net/uploads/attachments/1891493/unnamed.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+![Screenshot 2025-01-28 at 9.16.47 PM.png](https://usercdn.edgeimpulse.com/project840566/6c3c51e2b1f7427ca3688587413749389bc116ca17afee062742b90b38591cab)
 
 **From the Firebase Configuration Object:**
 
@@ -1168,7 +1173,7 @@ const firebaseConfig = {
 };
 ```
 
-**5.Firebase Auth Token (Firebase Database Secret)**
+### 5.Firebase Auth Token (Firebase Database Secret)
 
 The  **Firebase Database Secret**  is a legacy authentication mechanism for the Firebase Realtime Database. It is a long, randomly generated string that grants  **full read and write access**  to your entire database. It was primarily used for server-side applications or tools that needed unrestricted access to the database.
 
@@ -1188,45 +1193,40 @@ The  **Firebase Database Secret**  is a legacy authentication mechanism for the 
 -   Scroll down to the  **Database Secrets**  section
 -   Click  **"Show"**  to reveal the secret. You can also click  **"Add secret"**  to generate a new one if needed
 
-![](https://hackster.imgix.net/uploads/attachments/1891494/unnamed.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+![Screenshot 2025-01-28 at 9.17.16 PM.png](https://usercdn.edgeimpulse.com/project840566/efb2388334c1817606745b66e33d79136da0f69da99b4b6ff3a3963c46e989b7)
 
 -   Copy the secret and store it securely. Treat it like a password, as it grants full access to your database.
 
-# **Web Interface**
+# Web Interface
 
 The TrunkLink web portal offers a dual-tier interface, serving both public community members and authorized forest rangers with distinct access levels and functionalities. The platform separates public subscription services from wildlife management operations, ensuring appropriate data access while maintaining security protocols for sensitive tracking information.
 
-**Public Subscription Portal**
+## Public Subscription Portal
 
 The public-facing portal enables community members to register accounts and subscribe to elephant proximity alerts by sharing their current location through their device's GPS. The client-side application continuously fetches real-time elephant location data from Firebase and performs distance calculations locally on the user's device, comparing their current coordinates against all tracked elephant positions. When any elephant comes within a 5-kilometer radius of the user's current location, the system triggers immediate proximity alerts.
 
-![Public.png](https://hackster.imgix.net/uploads/attachments/1891522/public_sjH8ivcxoH.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+![Public.png](https://usercdn.edgeimpulse.com/project840566/509127618c7823acd8acad029258c91d6b15a9489f02de07b9b3449e0b5256d1)
 
-**Authorized Ranger Dashboard**
+## Authorized Ranger Dashboard
 
-The ranger dashboard offers comprehensive wildlife monitoring capabilities, including real-time elephant tracking through interactive GIS mapping, dynamic geofencing tools for creating virtual boundaries around protected areas, and immediate alerts for geofence breaches. Rangers receive prioritized notifications from the Edge AI behavioral analysis system when abnormal motion patterns indicate potential distress or aggressive behavior, along with emergency response coordination tools and comprehensive analytics for monitoring population dynamics, movement patterns, and assessing human-elephant conflict.
+The ranger dashboard offers comprehensive wildlife monitoring capabilities, including real-time elephant tracking through interactive GIS mapping, dynamic geofencing tools for creating virtual boundaries around protected areas, and immediate alerts for geofence breaches as well as for poacher detections. Rangers receive prioritized notifications from the Edge AI behavioral analysis system when abnormal motion patterns indicate potential distress or aggressive behavior, along with emergency response coordination tools and comprehensive analytics for monitoring population dynamics, movement patterns, and assessing human-elephant conflict.
 
-![Login.png](https://hackster.imgix.net/uploads/attachments/1891524/login_QffrgT1e91.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+![Login.png](https://usercdn.edgeimpulse.com/project840566/fff44ceb5e4b16030d442392d4023718a7b5be73084d5ab24288b6de6fb83eda)
 
-![Dashboard.png](https://hackster.imgix.net/uploads/attachments/1891525/dashboard_5NOzpq5qli.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+![Dashboard.png](https://usercdn.edgeimpulse.com/project840566/83cbcf429a930e05b137b9ac76f4c204880d243792fcd73c39e99569d99de2d3)
 
-  
+![Screenshot 2025-09-30 at 11.19.43 PM.png](https://usercdn.edgeimpulse.com/project840566/1495744e91c291ffb1c31be6fecd243bda66b0fb80508b1a57107869269daba7)
 
-![Screenshot 2025-09-30 at 11.19.43 PM.png](https://hackster.imgix.net/uploads/attachments/1892401/screenshot_2025-09-30_at_11_19_43pm_A7Z0y9Z8F4.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+![Screenshot 2025-09-30 at 11.20.19 PM.png](https://usercdn.edgeimpulse.com/project840566/2a8c7fe2bbd0539bc3f1d2a2dc2779b323b4f28806200255feb09e56837cd786)
 
-  
+![Screenshot 2025-09-30 at 11.19.58 PM.png](https://usercdn.edgeimpulse.com/project840566/a640cfc8988012a2494751c5de4c80fb3a110a43cb0a7288c0750d95a1a6c324)
 
-![Screenshot 2025-09-30 at 11.20.19 PM.png](https://hackster.imgix.net/uploads/attachments/1892403/screenshot_2025-09-30_at_11_20_19pm_F60rr6gzXI.png?auto=compress%2Cformat&w=740&h=555&fit=max)
-
-  
-
-![Screenshot 2025-09-30 at 11.19.58 PM.png](https://hackster.imgix.net/uploads/attachments/1892402/screenshot_2025-09-30_at_11_19_58pm_k12CPwwFSl.png?auto=compress%2Cformat&w=740&h=555&fit=max)
-
-  
-
-![Screenshot 2025-09-30 at 11.38.08 PM.png](https://hackster.imgix.net/uploads/attachments/1892409/screenshot_2025-09-30_at_11_38_08pm_gsacF3V8Ue.png?auto=compress%2Cformat&w=740&h=555&fit=max)
+![Screenshot 2025-09-30 at 11.38.08 PM.png](https://usercdn.edgeimpulse.com/project840566/975a65b4d97f32a5f9b477e110dddef8420811b6e8fd0a2ac3b3c7e6512e9f51)
 
 # Deployment
+![_91A9605 (1).jpg](https://usercdn.edgeimpulse.com/project840566/8a631e09561a4a1f2365779a46def0fa0fcac8dd3c281e9fa35a05f527b2acfa)
+
+![DSC03384.jpg](https://usercdn.edgeimpulse.com/project840566/b23a3b5dea481385c09e21045a6d79e1e7db7cd2839395922eb1489d333db8c0)
 
 ![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/_91A9617.JPG)
 
@@ -1269,3 +1269,9 @@ To maximize global conservation impact, TrunkLink's hardware designs, firmware, 
 TrunkLink is preparing for  **initial field deployment at Wayanad Wildlife Sanctuary**, where the system will undergo real-world validation in one of Kerala's most critical human-elephant conflict zones. Following successful field trials, the system will expand to additional conflict hotspots across Kerala's Western Ghats corridor, with plans for  **50+ smart collars**  and  **200+ perimeter nodes**  creating a comprehensive protection network. Partnerships with the Kerala Forest Department and conservation organizations will facilitate scaling to other states, potentially protecting thousands of elephants and saving hundreds of lives annually.
 
 The vision extends beyond technology deployment to fostering  **peaceful coexistence**  where human development and wildlife conservation are complementary goals achieved through intelligent monitoring, early intervention, and data-driven decision making.
+
+
+# **Edge Impulse Project Links**
+
+1. TrunkLink V2 - Perimeter Vision : https://studio.edgeimpulse.com/public/840566/live
+2. TrunkLink V2 - Movement : https://studio.edgeimpulse.com/public/830157/live
