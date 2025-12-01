@@ -20,7 +20,6 @@ TrunkLink emerges from this critical need: a robust, field-tested elephant monit
 
 # The TrunkLink Ecosystem
 ![Elephant in Tech-Connected Forest.png](https://usercdn.edgeimpulse.com/project840566/b9768719068b6d1dc8c55aaeca759dbacce54aefd8db8b3c9d2aa938263c4ad8)
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/Elephant%20in%20Tech-Connected%20Forest.png)
 
 The TrunkLink system creates an intelligent wildlife monitoring network that combines  **passive elephant tracking**  with  **active threat detection**  to prevent both human-elephant conflicts and poaching activities in protected forest areas.
 
