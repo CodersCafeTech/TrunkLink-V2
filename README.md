@@ -279,8 +279,6 @@ We began the assembly by preparing the XIAO ESP32-S3 Sense board and soldering i
 After that, each module was placed inside and outside the enclosure one by one, making sure all power and signal connections were routed cleanly and securely.
 A dedicated battery holder was mounted inside the enclosure to keep the lithium battery stable, and a small cutout PCB was added to neatly mount both the LTE modem and the voltage booster. For the LoRa module, we used a  4G antenna for improved reception and mounted it externally for maximum signal performance.
 
-![DSC03439.JPG](https://usercdn.edgeimpulse.com/project840566/44b05b988d3ea45ecd5601462646390ddd219e2195a71960aae89f04b30ab6a5)
-
 ![DSC03459.jpg](https://usercdn.edgeimpulse.com/project840566/8aebe6d0a0d027df2f6409548016a10abadf98cb56df5ff1a149dfd9c8e3cded)
 
 ![DSC03461.jpg](https://usercdn.edgeimpulse.com/project840566/23f747ae749e4c60a23a8006477dd75ffc9441138a1390d53c8df565a64cd47f)
@@ -1230,10 +1228,6 @@ The ranger dashboard offers comprehensive wildlife monitoring capabilities, incl
 ![_91A9605 (1).jpg](https://usercdn.edgeimpulse.com/project840566/8a631e09561a4a1f2365779a46def0fa0fcac8dd3c281e9fa35a05f527b2acfa)
 
 ![DSC03384.jpg](https://usercdn.edgeimpulse.com/project840566/b23a3b5dea481385c09e21045a6d79e1e7db7cd2839395922eb1489d333db8c0)
-
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/_91A9617.JPG)
-
-![](https://www.electronicwings.com/storage/ProjectSection/Projects/9130/trunklink--edge-aiot-for-peaceful-human-elephant-coexistence/detailed-description/DSC03384.JPG)
 
 We successfully deployed TrunkLink on an elephant and verified its functionality through our web dashboard. Alongside the collar, we also tested the perimeter node system, confirming reliable LoRa communication, motion detection, and cloud reporting. Moving forward, we aim to collaborate with the Wayanad Wildlife Sanctuary to deploy both the smart tracking collars and perimeter nodes in real forest environments, strengthening wildlife monitoring and conservation efforts.  
 
